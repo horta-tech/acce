@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="600 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+<defs>
+    <style>
+        #line{
+            stroke-dasharray: 4000;
+            stroke-dashoffset:100;
+            animation: dash 4s linear forwards;
+        }
+        @keyframes dash{
+            from{
+                stroke-dashoffset:4000;
+            }
+            to{
+                stroke-dashoffset:0;
+            }
+        }
+    </style> 
+</defs>
+<g id="logo">
+	<polygon style="fill:#3C3C3B;" points="-499,-419.35 -499,436.31 -44.92,-124.76 	"/>
+	<polygon style="fill:#3C3C3B;" points="1041.78,-1467.5 -445.71,-468.85 459.29,-747.76 	"/>
+	<polygon style="fill:#777776;" points="436.06,-719.07 -485.38,-435.08 -31.88,-140.87 	"/>
+	<polygon style="fill:#777776;" points="1934.63,902.02 1103.22,615.64 1103.22,1041.05 	"/>
+	<path style="fill:#777776;" d="M292.8,523.76l759.97,63.67L175.39,18.19l-656.41,440.73l773.63,64.82
+		C292.68,523.74,292.73,523.74,292.8,523.76z"/>
+	<polygon style="fill:#525251;" points="1082.6,1476.46 1082.6,610.69 315.47,546.41 	"/>
+	<polygon style="fill:#3C3C3B;" points="1103.22,1485.62 1931.42,923.41 1103.22,1061.91 	"/>
+	<polygon style="fill:#BCBCBB;" points="2597.19,458.58 1969.92,18.15 1131.51,587.39 	"/>
+	<polygon style="fill:#BCBCBB;" points="2585.58,-453.39 1142.7,-1466.64 1864.04,-534.21 	"/>
+	<polygon style="fill:#929191;" points="-466.71,480.89 1042.35,1460.05 286.78,544.02 	"/>
+	<polygon style="fill:#929191;" points="1974.74,894.01 2583.87,480.53 1142.18,607.23 	"/>
+	<polygon style="fill:#525251;" points="-14.39,-129.53 175.21,-6.52 1066.72,-605.11 469.57,-727.5 	"/>
+	<polygon style="fill:#929191;" points="1835.58,-537.4 1103.22,-1484.07 1103.22,-619.45 	"/>
+	<polygon style="fill:#525251;" points="-458.07,418.71 156.59,5.99 -27.43,-113.4 	"/>
+	<polygon style="fill:#929191;" points="1970.13,-6.92 2595.57,-431.56 1131.81,-595.53 	"/>
+	<polygon style="fill:#BCBCBB;" points="1082.6,-1485 484.15,-745.53 1082.6,-622.85 	"/>
+</g>
+<path id="line" style="fill:none;stroke:#65378C;stroke-width:2;stroke-miterlimit:10;" d="M321.95,542.95l762.41,18.27
+	L174.63,45.28l-628.98,479.06l776.11,18.6C321.83,542.94,321.88,542.94,321.95,542.95z"/>
+</svg>
