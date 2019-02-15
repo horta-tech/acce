@@ -1,1079 +1,1105 @@
-html {
-    overflow: hidden;
-    font-family: 'Alegreya Sans', sans-serif;
-}
-
-p {
-    font-size: 1rem;
-}
-
-img,
-svg {
-    max-width: 100%;
-}
-
-footer p {
-    color: white;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    color: inherit;
-}
-
-.hide {
-    display: none;
-}
-
-.img-portfolio picture {
-    background-image: url(../img/portfolio_triangle.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-team a,
-#home a,
-.team-all a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-}
-
-@media (min-width: 990px) {
-    @keyframes bgcolor {
-        0% {
-            background-color: #535252;
-            background-position: 40% 80%;
-        }
-        30% {
-            background-color: #999999;
-            background-position: 30% 60%;
-        }
-        60% {
-            background-color: #3E3E3D;
-            background-position: 20% 50%;
-        }
-        90% {
-            background-color: #919190;
-            background-position: 10% 40%;
-        }
-        100% {
-            background-color: #BBBBBB;
-            background-position: 0% 0%;
-        }
-    }
-    #home {
-        -webkit-animation: bgcolor 20s;
-        animation: bgcolor 10s;
-        -webkit-animation-direction: alternate;
-        animation-direction: alternate;
-        background-image: url(../img/simbolo.svg);
-        background-size: 300%;
-    }
-    #tabs {
-        display: none;
-    }
-    #home img {
-        width: 80%;
-    }
-    .logo-home {
-        position: absolute;
-        top: 17%;
-        left: 9.7%;
-        -webkit-animation: fadeout 20s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadeout 20s;
-        /* Firefox < 16 */
-        -ms-animation: fadeout 20s;
-        /* Internet Explorer */
-        -o-animation: fadeout 20s;
-        /* Opera < 12.1 */
-        animation: fadeout 20s;
-    }
-    .menu-about,
-    .menu-local,
-    .menu-service,
-    .menu-portfolio,
-    .menu-contact,
-    .menu-team {
-        width: 100px;
-        max-height: 150px;
-        position: absolute;
-    }
-    .menu-about {
-        top: 12%;
-        left: -15%;
-        opacity: 0;
-    }
-    .menu-local {
-        top: 55%;
-        left: -20.5%;
-        opacity: 0;
-    }
-    .menu-service {
-        top: 18%;
-        left: -0.5%;
-        opacity: 0;
-    }
-    .menu-team {
-        top: 45.8%;
-        left: 0.8%;
-        opacity: 0;
-    }
-    .menu-portfolio {
-        top: 70%;
-        left: -7.8%;
-        opacity: 0;
-    }
-    .menu-contact {
-        top: 38%;
-        left: -27.5%;
-        opacity: 0;
-    }
-    .menu-about:hover,
-    .menu-portfolio:hover,
-    .menu-service:hover,
-    .menu-contact:hover,
-    .menu-team:hover,
-    .menu-local:hover {
-        opacity: 1;
-    }
-    .menu-home {
-        position: absolute;
-        top: 16.5%;
-        left: 10.2%;
-        -webkit-animation: fadein 25s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 25s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 25s;
-        /* Internet Explorer */
-        -o-animation: fadein 25s;
-        /* Opera < 12.1 */
-        animation: fadein 25s;
-    }
-    body {
-        height: 100vh;
-        overflow: hidden;
-        background-color: none;
-        display: grid;
-        grid-template: 1fr 8fr 0.5fr / 1fr;
-    }
-    main {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 3;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        background-size: 120% 120%;
-    }
-    nav {
-        height: 100px;
-        z-index: 1;
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-        padding: 1%;
-        display: flex;
-        justify-content: space-between;
-        color: #F2F2F2;
-    }
-    nav>picture {
-        width: 12%;
-        height: 100%;
-    }
-    menu {
-        display: flex;
-        justify-self: flex-end;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 40%;
-    }
-    .nav-home {
-        display: none;
-    }
-    .txt-about {
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/about_solid.svg);
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: 110%;
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-        color: #F2F2F2;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    .txt-about header {
-        grid-column: 5 / span 3;
-        grid-row: 3 /span 1;
-        align-self: center;
-        justify-self: center;
-        font-size: 2.5em;
-        font-weight: bolder;
-    }
-    .txt-about :nth-child(2) {
-        grid-column: 5 / span 2;
-        grid-row: 5 /span 2;
-    }
-    .txt-about :nth-child(3) {
-        grid-column: 8 / span 2;
-        grid-row: 6 /span 1;
-    }
-    .txt-about :nth-child(4) {
-        grid-column: 4 / span 2;
-        grid-row: 8 /span 1;
-    }
-    .txt-service {
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/service_solid.svg);
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-        color: #F2F2F2;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    .txt-service header {
-        grid-column: 5 / span 3;
-        grid-row: 2 /span 1;
-        align-self: center;
-        justify-self: center;
-        font-size: 2.5em;
-        font-weight: bolder;
-    }
-    .txt-service div {
-        width: 100%;
-        height: 100%;
-        grid-column: 5 / span 3;
-        grid-row: 4 /span 3;
-        display: flex;
-        flex-direction: column;
-        font-weight: bolder;
-        justify-content: space-around;
-        font-size: 1.2em;
-    }
-    .txt-team {
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/team_solid.svg);
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: 180%;
-        grid-column: 1 / span 4;
-        grid-row: 1 /span 12;
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-        color: #F2F2F2;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    .img-team picture,
-    .team-all picture {
-        object-fit: cover;
-        width: 100%;
-        max-height: 100%;
-        outline: 2px solid #EFC700;
-        background-repeat: no-repeat;
-        z-index: 10;
-    }
-    .andre-txt {
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        padding: 5%;
-        grid-column: 7 / span 5;
-        grid-row: 8/span 3;
-        display: grid;
-        grid-template: repeat(3, 1fr) /1fr;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.5);
-        outline: 2px solid #EFC700;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    #title-andre {
-        grid-column: 6/span 3;
-        grid-row: 5;
-        font-size: 3rem;
-    }
-    .felipe-txt {
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        padding: 5%;
-        grid-column: 9 / span 3;
-        grid-row: 7/span 3;
-        display: grid;
-        grid-template: repeat(2, 1fr) /1fr;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.5);
-        outline: 2px solid #EFC700;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    #title-felipe {
-        grid-column: 3/span 3;
-        grid-row: 4;
-        font-size: 3rem;
-    }
-    .lucas-txt {
-        z-index: 0;
-        padding: 5%;
-        grid-column: 8/ span 4;
-        grid-row: 4/span 3;
-        display: grid;
-        grid-template: 1fr /1fr;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.5);
-        outline: 2px solid #EFC700;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    #title-lucas {
-        grid-column: 3/span 3;
-        grid-row: 5;
-        font-size: 3rem;
-    }
-    .luciano-txt {
-        z-index: 0;
-        padding: 5%;
-        grid-column: 5/ span 4;
-        grid-row: 7/span 5;
-        display: grid;
-        grid-template: repeat(2, 1fr) /1fr;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.5);
-        outline: 2px solid #EFC700;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    #title-luciano {
-        grid-column: 3/span 3;
-        grid-row: 5;
-        font-size: 3rem;
-    }
-    .txt-team header,
-    .txt-contato header,
-    .txt-local header {
-        grid-column: 2 / span 1;
-        grid-row: 8 /span 1;
-        align-self: center;
-        justify-self: center;
-        font-size: 2.5em;
-        font-weight: bolder;
-    }
-    .img-team,
-    .team-all {
-        width: 100%;
-        height: 100%;
-        grid-column: 4 / span 12;
-        grid-row: 1 /span 12;
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-        color: #F2F2F2;
-    }
-    .txt-portfolio {
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/portfolio_solid.svg);
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        grid-column: 1 / span 12;
-        grid-row: 1 /span 12;
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-        color: #F2F2F2;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    .txt-portfolio header {
-        grid-column: 2 / span 1;
-        grid-row: 8 /span 1;
-        align-self: center;
-        justify-self: center;
-        font-size: 2.5em;
-        font-weight: bolder;
-    }
-    .img-portfolio {
-        grid-column: 4 / span 12;
-        grid-row: 1 /span 12;
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-    }
-    .img-portfolio :nth-child(n) {
-        -webkit-animation: fadein 6s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 6s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 6s;
-        /* Internet Explorer */
-        -o-animation: fadein 6s;
-        /* Opera < 12.1 */
-        animation: fadein 6s;
-    }
-    .img-portfolio :nth-child(1) {
-        grid-column: 1/ span 3;
-        grid-row: 2 /span 3;
-    }
-    .img-portfolio :nth-child(2) {
-        grid-column: 4 / span 3;
-        grid-row: 3 /span 3;
-    }
-    .img-portfolio :nth-child(3) {
-        grid-column: 5 / span 3;
-        grid-row: 6 /span 3;
-    }
-    .img-portfolio :nth-child(4) {
-        grid-column: 8 / span 3;
-        grid-row: 3 /span 3;
-    }
-    .img-portfolio :nth-child(5) {
-        grid-column: 9 / span 3;
-        grid-row: 7 /span 3;
-    }
-    .felipe {
-        grid-column: 4/ span 3;
-        grid-row: 6 /span 4;
-        background-image: url(../img/felipe_Litwinski.jpg);
-        background-position: center;
-        background-position: -80px 0px;
-        -webkit-animation: fadein 6s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 8s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 6s;
-        /* Internet Explorer */
-        -o-animation: fadein 6s;
-        /* Opera < 12.1 */
-        animation: fadein 6s;
-    }
-    .luciano {
-        grid-column: 9 / span 3;
-        grid-row: 5 /span 4;
-        background-image: url(../img/luciano_fialho.jpg);
-        background-position: -80px 0px;
-        -webkit-animation: fadein 6s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 6s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 6s;
-        /* Internet Explorer */
-        -o-animation: fadein 6s;
-        /* Opera < 12.1 */
-        animation: fadein 6s;
-    }
-    .andre {
-        grid-column: 2 / span 3;
-        grid-row: 3 /span 4;
-        background-image: url(../img/andre_simao.jpg);
-        background-position: center;
-        -webkit-animation: fadein 6s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 6s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 6s;
-        /* Internet Explorer */
-        -o-animation: fadein 6s;
-        /* Opera < 12.1 */
-        animation: fadein 6s;
-    }
-    .lucas {
-        grid-column: 7 / span 3;
-        grid-row: 8 /span 4;
-        background-image: url(../img/Lucas_Mallard.jpg);
-        background-position: center;
-        background-position: -80px 0px;
-        -webkit-animation: fadein 6s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 6s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 6s;
-        /* Internet Explorer */
-        -o-animation: fadein 6s;
-        /* Opera < 12.1 */
-        animation: fadein 6s;
-    }
-    .txt-local {
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/local_solid.svg);
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: 130%;
-        grid-column: 1 / span 6;
-        grid-row: 1 /span 12;
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-        color: #F2F2F2;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    #local section {
-        grid-column: 8/ span 4;
-        grid-row: 4 /span 8;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        outline: 2px solid #f08252;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    .map {
-        width: 100%;
-        height: 100%;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    .address {
-        grid-column: 5/ span 2;
-        grid-row: 3 /span 2;
-        padding: 6%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.5);
-        outline: 2px solid #f08252;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    .txt-contato {
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/contato_solid.svg);
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: 150%;
-        grid-column: 1 / span 6;
-        grid-row: 1 /span 12;
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-        color: #F2F2F2;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    .contact {
-        grid-column: 7/ span 5;
-        grid-row: 3 /span 8;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        -webkit-animation: fadein 2s;
-        /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 2s;
-        /* Firefox < 16 */
-        -ms-animation: fadein 2s;
-        /* Internet Explorer */
-        -o-animation: fadein 2s;
-        /* Opera < 12.1 */
-        animation: fadein 2s;
-    }
-    .form-area {
-        width: 100%;
-        padding: 1%;
-    }
-    .form-group :nth-child(n) {
-        width: 100%;
-        padding: 1%;
-        margin: 1%;
-        border: solid 2px #65378C;
-        border-radius: 4px;
-    }
-    #submit {
-        width: 180px;
-        background-color: #65378C;
-        color: white;
-        font-weight: bolder;
-    }
-    #home {
-        background-color: #F2F2F2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #contact {
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-        background-color: #919190;
-        background-image: url(../img/contato_bg.svg);
-    }
-    #about {
-        background-color: #919190;
-        background-image: url(../img/about_bg.svg);
-    }
-    #local {
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-        background-color: #646363;
-        background-image: url(../img/local_bg.svg);
-    }
-    #service {
-        background-color: #3E3E3D;
-        background-image: url(../img/service_bg.svg);
-    }
-    #portfolio {
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-        background-color: #919190;
-        background-image: url(../img/portfolio_bg.svg);
-    }
-    #team {
-        display: grid;
-        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
-        background-color: #BCBCBB;
-        background-image: url(../img/team_bg.svg);
-    }
-    footer {
-        display: none;
-    }
-    @keyframes fadeout {
-        from {
-            opacity: 1;
-        }
-        to {
-            opacity: 0;
-        }
-    }
-    @keyframes fadein {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-    /* Firefox < 16 */
-    @-moz-keyframes fadein {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-    /* Safari, Chrome and Opera > 12.1 */
-    @-webkit-keyframes fadein {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-    /* Internet Explorer */
-    @-ms-keyframes fadein {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-}
-
-@media (max-width: 989px) {
-    body {
-        height: 100vh;
-        overflow: hidden;
-        background-color: #F2F2F2;
-        display: grid;
-        grid-template: 1fr 8fr 0.5fr / 1fr;
-    }
-    nav {
-        height: 100px;
-        z-index: 1;
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-        background-image: url(../img/logo.svg);
-        background-position: center;
-        /* Center the image */
-        background-repeat: no-repeat;
-        /* Do not repeat the image */
-        background-size: 200px;
-        background-origin: content-box;
-        padding: 1%;
-    }
-    nav :nth-child(n),
-    #home :nth-child(n),
-    .txt-venture {
-        display: none;
-    }
-    main {
-        width: 100%;
-        height: 100%;
-    }
-    main header {
-        grid-column: 2 / span 1;
-        grid-row: 1 /span 1;
-        align-self: center;
-        justify-self: center;
-        font-size: 1.5em;
-        font-weight: bolder;
-        padding: 20px;
-        width: 75%;
-        color: #767676;
-        text-align: right;
-    }
-    .txt-about,
-    .txt-service-cont,
-    .andre-txt {
-        display: none;
-    }
-    .img-team picture,
-    .team-all picture {
-        object-fit: cover;
-        width: 70%;
-        max-height: 100%;
-        outline: 2px solid #EFC700;
-        background-repeat: no-repeat;
-        z-index: 10;
-    }
-    .img-portfolio {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    }
-    .img-portfolio picture {
-        width: 30%;
-        height: 30%;
-        padding: 30px 20px;
-    }
-    .felipe {
-        grid-column: 7/ span 4;
-        grid-row: 2 /span 4;
-        background-image: url(../img/felipe_Litwinski.jpg);
-        background-position: 0 0;
-        background-size: cover;
-    }
-    .luciano {
-        grid-column: 8 / span 4;
-        grid-row: 7 /span 4;
-        background-image: url(../img/luciano_fialho.jpg);
-        background-position: 0 0;
-        background-size: cover;
-    }
-    .andre {
-        grid-column: 4 / span 2;
-        grid-row: 1 /span 2;
-        background-image: url(../img/andre_simao.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    .lucas {
-        grid-column: 2 / span 4;
-        grid-row: 6/span 4;
-        background-image: url(../img/Lucas_Mallard.jpg);
-        background-position: 0 0;
-        background-size: cover;
-    }
-    .img-team {
-        width: 100%;
-        height: 30%;
-        display: flex;
-        color: #F2F2F2;
-    }
-    #home {
-        background-image: url(../img/logo_mobile_bg.svg);
-        background-size: 135% 135% !important;
-    }
-    #contact {
-        background-image: url(../img/contato.svg);
-        background-size: 250% 180%;
-    }
-    #about {
-        background-image: url(../img/about_mobile.svg);
-        background-size: 350% 130%;
-        padding: 10%;
-    }
-    #local {
-        background-image: url(../img/local.svg);
-        background-size: 250% 150%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: space-around;
-        align-items: center;
-    }
-    .txt-local {
-        padding: 4%;
-    }
-    #local section {
-        width: 100%;
-        height: 75%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #service {
-        background-image: url(../img/service_mobile.svg);
-        background-size: 250% 150%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .txt-ser {
-        display: none;
-    }
-    .txt-service {
-        width: 100%;
-        height: 100%;
-    }
-    .txt-service>div {
-        width: 80%;
-        height: 70%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: right;
-        padding: 8%;
-    }
-    #portfolio {
-        background-image: url(../img/portfolio_mobile.svg);
-        background-size: 250% 150%;
-    }
-    #team {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        background-image: url(../img/equipe.svg);
-        background-size: 250% 150%;
-    }
-    .team-all {
-        display: grid;
-        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        height: 70%;
-        grid-gap: 5%;
-    }
-    .team-all picture {
-        width: 100%;
-        height: 100%;
-    }
-    .team-all .andre {
-        grid-column: 1/span 1;
-        grid-row: 1 / span 1;
-    }
-    .team-all .felipe {
-        grid-column: 1/span 1;
-        grid-row: 2 / span 1;
-    }
-    .team-all .lucas {
-        grid-column: 2/span 1;
-        grid-row: 1 / span 1;
-    }
-    .team-all .luciano {
-        grid-column: 2/span 1;
-        grid-row: 2 / span 1;
-    }
-    #tabs {
-        width: 80%;
-        height: 40%;
-        display: grid;
-        grid-template: 1fr 0.5fr / 1fr;
-        justify-content: center;
-        align-items: center;
-    }
-    #div1,
-    #div2 {
-        grid-column: 1;
-        grid-row: 1;
-    }
-    #nav {
-        grid-column: 1;
-        grid-row: 2;
-    }
-    .logo-bg {
-        height: 100%;
-        width: 60%;
-    }
-    .map {
-        height: 50%;
-        width: 60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        outline: 2px solid #f08252;
-    }
-    .address {
-        width: 90%;
-        padding: 10%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    nav>picture {
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        padding: 2% 0;
-    }
-    .contact {
-        width: 100%;
-        height: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .img-portfolio {
-        width: 100%;
-        height: 70%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .img-portfolio picture {
-        width: 30%;
-        height: 30%;
-        padding: 20px 10px;
-    }
-    .form-area {
-        width: 60%;
-        padding: 1%;
-    }
-    .form-group :nth-child(n) {
-        width: 100%;
-        padding: 1%;
-        margin: 1%;
-        border: solid 2px #65378C;
-        border-radius: 4px;
-    }
-    #submit {
-        width: 100px;
-        background-color: #65378C;
-        color: white;
-        font-weight: bolder;
-    }
-    footer {
-        grid-row: 3;
-        padding: 2%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: center;
-        background-color: #3C3C3B;
-    }
-    footer img {
-        max-width: 50px;
-    }
-    footer p {
-        font-size: 0.7em;
-    }
-}
+                                    html {
+                                    overflow: hidden;
+                                    font-family: 'Alegreya Sans', sans-serif;
+                                }
+                                
+                                p {
+                                    font-size: 1rem;
+                                }
+                                
+                                img,
+                                svg {
+                                    max-width: 100%;
+                                }
+                                
+                                footer p {
+                                    color: white;
+                                }
+                                
+                                a:link {
+                                    text-decoration: none;
+                                }
+                                
+                                a:visited {
+                                    color: inherit;
+                                }
+                                
+                                .hide {
+                                    display: none;
+                                }
+                                
+                                .img-portfolio picture {
+                                    background-image: url(../img/portfolio_triangle.svg);
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: 90%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                
+                                .img-team a,
+                                #home a,
+                                .team-all a {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 9999;
+                                }
+                                
+                                @media (min-width: 990px) {
+                                    @keyframes bgcolor {
+                                        0% {
+                                            background-color: #535252;
+                                            background-position: 40% 80%;
+                                        }
+                                        30% {
+                                            background-color: #999999;
+                                            background-position: 30% 60%;
+                                        }
+                                        60% {
+                                            background-color: #3E3E3D;
+                                            background-position: 20% 50%;
+                                        }
+                                        90% {
+                                            background-color: #919190;
+                                            background-position: 10% 40%;
+                                        }
+                                        100% {
+                                            background-color: #BBBBBB;
+                                            background-position: 0% 0%;
+                                        }
+                                    }
+                                    #home {
+                                        -webkit-animation: bgcolor 20s;
+                                        animation: bgcolor 10s;
+                                        -webkit-animation-direction: alternate;
+                                        animation-direction: alternate;
+                                        background-image: url(../img/simbolo.svg);
+                                        background-size: 300%;
+                                    }
+                                    #call-index {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+                                    }
+                                    #call-index h3 {
+                                        font-size: 3.0em;
+                                        white-space: nowrap;
+                                    }
+                                    #call-index p {
+                                        font-size: 2.0em;
+                                        white-space: nowrap;
+                                    }
+                                    #call-index div:nth-child(1) {
+                                        grid-row: 9;
+                                        grid-column: 8;
+                                        animation: fadein 20s;
+                                    }
+                                    #call-index div:nth-child(2) {
+                                        grid-row: 2;
+                                        grid-column: 6;
+                                    }
+                                    #call-index div:nth-child(3) {
+                                        grid-row: 2;
+                                        grid-column: 10;
+                                    }
+                                    #tabs {
+                                        display: none;
+                                    }
+                                    #home img {
+                                        width: 80%;
+                                    }
+                                    .logo-home {
+                                        position: absolute;
+                                        top: 17%;
+                                        left: 9.7%;
+                                        -webkit-animation: fadeout 20s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadeout 20s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadeout 20s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadeout 20s;
+                                        /* Opera < 12.1 */
+                                        animation: fadeout 20s;
+                                    }
+                                    .menu-about,
+                                    .menu-local,
+                                    .menu-service,
+                                    .menu-portfolio,
+                                    .menu-contact,
+                                    .menu-team {
+                                        width: 100px;
+                                        max-height: 150px;
+                                        position: absolute;
+                                    }
+                                    .menu-about {
+                                        top: 12%;
+                                        left: -15%;
+                                        opacity: 0;
+                                    }
+                                    .menu-local {
+                                        top: 55%;
+                                        left: -20.5%;
+                                        opacity: 0;
+                                    }
+                                    .menu-service {
+                                        top: 18%;
+                                        left: -0.5%;
+                                        opacity: 0;
+                                    }
+                                    .menu-team {
+                                        top: 45.8%;
+                                        left: 0.8%;
+                                        opacity: 0;
+                                    }
+                                    .menu-portfolio {
+                                        top: 70%;
+                                        left: -7.8%;
+                                        opacity: 0;
+                                    }
+                                    .menu-contact {
+                                        top: 38%;
+                                        left: -27.5%;
+                                        opacity: 0;
+                                    }
+                                    .menu-about:hover,
+                                    .menu-portfolio:hover,
+                                    .menu-service:hover,
+                                    .menu-contact:hover,
+                                    .menu-team:hover,
+                                    .menu-local:hover {
+                                        opacity: 1;
+                                    }
+                                    .menu-home {
+                                        position: absolute;
+                                        top: 16.5%;
+                                        left: 10.2%;
+                                        -webkit-animation: fadein 25s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 25s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 25s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 25s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 25s;
+                                    }
+                                    body {
+                                        height: 100vh;
+                                        overflow: hidden;
+                                        background-color: none;
+                                        display: grid;
+                                        grid-template: 1fr 8fr 0.5fr / 1fr;
+                                    }
+                                    main {
+                                        grid-column: 1 / span 1;
+                                        grid-row: 1 / span 3;
+                                        width: 100%;
+                                        height: 100%;
+                                        z-index: 0;
+                                        background-size: 120% 120%;
+                                    }
+                                    nav {
+                                        height: 100px;
+                                        z-index: 1;
+                                        grid-column: 1 / span 1;
+                                        grid-row: 1 / span 1;
+                                        padding: 1%;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        color: #F2F2F2;
+                                    }
+                                    nav>picture {
+                                        width: 12%;
+                                        height: 100%;
+                                    }
+                                    menu {
+                                        display: flex;
+                                        justify-self: flex-end;
+                                        align-items: center;
+                                        justify-content: space-evenly;
+                                        width: 40%;
+                                    }
+                                    .nav-home {
+                                        display: none;
+                                    }
+                                    .txt-about {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-image: url(../img/about_solid.svg);
+                                        background-position: left;
+                                        background-repeat: no-repeat;
+                                        background-size: 110%;
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                        color: #F2F2F2;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    .txt-about header {
+                                        grid-column: 5 / span 3;
+                                        grid-row: 3 /span 1;
+                                        align-self: center;
+                                        justify-self: center;
+                                        font-size: 2.5em;
+                                        font-weight: bolder;
+                                    }
+                                    .txt-about :nth-child(2) {
+                                        grid-column: 5 / span 2;
+                                        grid-row: 5 /span 2;
+                                    }
+                                    .txt-about :nth-child(3) {
+                                        grid-column: 8 / span 2;
+                                        grid-row: 6 /span 1;
+                                    }
+                                    .txt-about :nth-child(4) {
+                                        grid-column: 4 / span 2;
+                                        grid-row: 8 /span 1;
+                                    }
+                                    .txt-service {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-image: url(../img/service_solid.svg);
+                                        background-position: left;
+                                        background-repeat: no-repeat;
+                                        background-size: 100%;
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                        color: #F2F2F2;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    .txt-service header {
+                                        grid-column: 5 / span 3;
+                                        grid-row: 2 /span 1;
+                                        align-self: center;
+                                        justify-self: center;
+                                        font-size: 2.5em;
+                                        font-weight: bolder;
+                                    }
+                                    .txt-service div {
+                                        width: 100%;
+                                        height: 100%;
+                                        grid-column: 5 / span 3;
+                                        grid-row: 4 /span 3;
+                                        display: flex;
+                                        flex-direction: column;
+                                        font-weight: bolder;
+                                        justify-content: space-around;
+                                        font-size: 1.2em;
+                                    }
+                                    .txt-team {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-image: url(../img/team_solid.svg);
+                                        background-position: left;
+                                        background-repeat: no-repeat;
+                                        background-size: 180%;
+                                        grid-column: 1 / span 4;
+                                        grid-row: 1 /span 12;
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                        color: #F2F2F2;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    .img-team picture,
+                                    .team-all picture {
+                                        object-fit: cover;
+                                        width: 100%;
+                                        max-height: 100%;
+                                        outline: 2px solid #EFC700;
+                                        background-repeat: no-repeat;
+                                        z-index: 10;
+                                    }
+                                    .andre-txt {
+                                        width: 100%;
+                                        height: 100%;
+                                        z-index: 0;
+                                        padding: 5%;
+                                        grid-column: 7 / span 5;
+                                        grid-row: 8/span 3;
+                                        display: grid;
+                                        grid-template: repeat(3, 1fr) /1fr;
+                                        justify-content: center;
+                                        align-content: center;
+                                        align-items: center;
+                                        background-color: rgba(255, 255, 255, 0.5);
+                                        outline: 2px solid #EFC700;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    #title-andre {
+                                        grid-column: 6/span 3;
+                                        grid-row: 5;
+                                        font-size: 3rem;
+                                    }
+                                    .felipe-txt {
+                                        width: 100%;
+                                        height: 100%;
+                                        z-index: 0;
+                                        padding: 5%;
+                                        grid-column: 9 / span 3;
+                                        grid-row: 7/span 3;
+                                        display: grid;
+                                        grid-template: repeat(2, 1fr) /1fr;
+                                        justify-content: center;
+                                        align-content: center;
+                                        align-items: center;
+                                        background-color: rgba(255, 255, 255, 0.5);
+                                        outline: 2px solid #EFC700;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    #title-felipe {
+                                        grid-column: 3/span 3;
+                                        grid-row: 4;
+                                        font-size: 3rem;
+                                    }
+                                    .lucas-txt {
+                                        z-index: 0;
+                                        padding: 5%;
+                                        grid-column: 8/ span 4;
+                                        grid-row: 4/span 3;
+                                        display: grid;
+                                        grid-template: 1fr /1fr;
+                                        justify-content: center;
+                                        align-content: center;
+                                        align-items: center;
+                                        background-color: rgba(255, 255, 255, 0.5);
+                                        outline: 2px solid #EFC700;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    #title-lucas {
+                                        grid-column: 3/span 3;
+                                        grid-row: 5;
+                                        font-size: 3rem;
+                                    }
+                                    .luciano-txt {
+                                        z-index: 0;
+                                        padding: 5%;
+                                        grid-column: 5/ span 4;
+                                        grid-row: 7/span 5;
+                                        display: grid;
+                                        grid-template: repeat(2, 1fr) /1fr;
+                                        justify-content: center;
+                                        align-content: center;
+                                        align-items: center;
+                                        background-color: rgba(255, 255, 255, 0.5);
+                                        outline: 2px solid #EFC700;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    #title-luciano {
+                                        grid-column: 3/span 3;
+                                        grid-row: 5;
+                                        font-size: 3rem;
+                                    }
+                                    .txt-team header,
+                                    .txt-contato header,
+                                    .txt-local header {
+                                        grid-column: 2 / span 1;
+                                        grid-row: 8 /span 1;
+                                        align-self: center;
+                                        justify-self: center;
+                                        font-size: 2.5em;
+                                        font-weight: bolder;
+                                    }
+                                    .img-team,
+                                    .team-all {
+                                        width: 100%;
+                                        height: 100%;
+                                        grid-column: 4 / span 12;
+                                        grid-row: 1 /span 12;
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                        color: #F2F2F2;
+                                    }
+                                    .txt-portfolio {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-image: url(../img/portfolio_solid.svg);
+                                        background-position: left;
+                                        background-repeat: no-repeat;
+                                        background-size: 100%;
+                                        grid-column: 1 / span 12;
+                                        grid-row: 1 /span 12;
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                        color: #F2F2F2;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    .txt-portfolio header {
+                                        grid-column: 2 / span 1;
+                                        grid-row: 8 /span 1;
+                                        align-self: center;
+                                        justify-self: center;
+                                        font-size: 2.5em;
+                                        font-weight: bolder;
+                                    }
+                                    .img-portfolio {
+                                        grid-column: 4 / span 12;
+                                        grid-row: 1 /span 12;
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                    }
+                                    .img-portfolio :nth-child(n) {
+                                        -webkit-animation: fadein 6s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 6s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 6s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 6s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 6s;
+                                    }
+                                    .img-portfolio :nth-child(1) {
+                                        grid-column: 1/ span 3;
+                                        grid-row: 2 /span 3;
+                                    }
+                                    .img-portfolio :nth-child(2) {
+                                        grid-column: 4 / span 3;
+                                        grid-row: 3 /span 3;
+                                    }
+                                    .img-portfolio :nth-child(3) {
+                                        grid-column: 5 / span 3;
+                                        grid-row: 6 /span 3;
+                                    }
+                                    .img-portfolio :nth-child(4) {
+                                        grid-column: 8 / span 3;
+                                        grid-row: 3 /span 3;
+                                    }
+                                    .img-portfolio :nth-child(5) {
+                                        grid-column: 9 / span 3;
+                                        grid-row: 7 /span 3;
+                                    }
+                                    .felipe {
+                                        grid-column: 4/ span 3;
+                                        grid-row: 6 /span 4;
+                                        background-image: url(../img/felipe_Litwinski.jpg);
+                                        background-position: center;
+                                        background-position: -80px 0px;
+                                        -webkit-animation: fadein 6s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 8s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 6s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 6s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 6s;
+                                    }
+                                    .luciano {
+                                        grid-column: 9 / span 3;
+                                        grid-row: 5 /span 4;
+                                        background-image: url(../img/luciano_fialho.jpg);
+                                        background-position: -80px 0px;
+                                        -webkit-animation: fadein 6s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 6s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 6s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 6s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 6s;
+                                    }
+                                    .andre {
+                                        grid-column: 2 / span 3;
+                                        grid-row: 3 /span 4;
+                                        background-image: url(../img/andre_simao.jpg);
+                                        background-position: center;
+                                        -webkit-animation: fadein 6s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 6s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 6s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 6s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 6s;
+                                    }
+                                    .lucas {
+                                        grid-column: 7 / span 3;
+                                        grid-row: 8 /span 4;
+                                        background-image: url(../img/Lucas_Mallard.jpg);
+                                        background-position: center;
+                                        background-position: -80px 0px;
+                                        -webkit-animation: fadein 6s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 6s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 6s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 6s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 6s;
+                                    }
+                                    .txt-local {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-image: url(../img/local_solid.svg);
+                                        background-position: left;
+                                        background-repeat: no-repeat;
+                                        background-size: 130%;
+                                        grid-column: 1 / span 6;
+                                        grid-row: 1 /span 12;
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                        color: #F2F2F2;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    #local section {
+                                        grid-column: 8/ span 4;
+                                        grid-row: 4 /span 8;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        outline: 2px solid #f08252;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    .map {
+                                        width: 100%;
+                                        height: 100%;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    .address {
+                                        grid-column: 5/ span 2;
+                                        grid-row: 3 /span 2;
+                                        padding: 6%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        background-color: rgba(255, 255, 255, 0.5);
+                                        outline: 2px solid #f08252;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    .txt-contato {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-image: url(../img/contato_solid.svg);
+                                        background-position: left;
+                                        background-repeat: no-repeat;
+                                        background-size: 150%;
+                                        grid-column: 1 / span 6;
+                                        grid-row: 1 /span 12;
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                        color: #F2F2F2;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    .contact {
+                                        grid-column: 7/ span 5;
+                                        grid-row: 3 /span 8;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        -webkit-animation: fadein 2s;
+                                        /* Safari, Chrome and Opera > 12.1 */
+                                        -moz-animation: fadein 2s;
+                                        /* Firefox < 16 */
+                                        -ms-animation: fadein 2s;
+                                        /* Internet Explorer */
+                                        -o-animation: fadein 2s;
+                                        /* Opera < 12.1 */
+                                        animation: fadein 2s;
+                                    }
+                                    .form-area {
+                                        width: 100%;
+                                        padding: 1%;
+                                    }
+                                    .form-group :nth-child(n) {
+                                        width: 100%;
+                                        padding: 1%;
+                                        margin: 1%;
+                                        border: solid 2px #65378C;
+                                        border-radius: 4px;
+                                    }
+                                    #submit {
+                                        width: 180px;
+                                        background-color: #65378C;
+                                        color: white;
+                                        font-weight: bolder;
+                                    }
+                                    #home {
+                                        background-color: #F2F2F2;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+                                    #contact {
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                        background-color: #919190;
+                                        background-image: url(../img/contato_bg.svg);
+                                    }
+                                    #about {
+                                        background-color: #919190;
+                                        background-image: url(../img/about_bg.svg);
+                                    }
+                                    #local {
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                        background-color: #646363;
+                                        background-image: url(../img/local_bg.svg);
+                                    }
+                                    #service {
+                                        background-color: #3E3E3D;
+                                        background-image: url(../img/service_bg.svg);
+                                    }
+                                    #portfolio {
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                        background-color: #919190;
+                                        background-image: url(../img/portfolio_bg.svg);
+                                    }
+                                    #team {
+                                        display: grid;
+                                        grid-template: repeat(12, 1fr) /repeat( 12, 1fr);
+                                        background-color: #BCBCBB;
+                                        background-image: url(../img/team_bg.svg);
+                                    }
+                                    footer {
+                                        display: none;
+                                    }
+                                    @keyframes fadeout {
+                                        from {
+                                            opacity: 1;
+                                        }
+                                        to {
+                                            opacity: 0;
+                                        }
+                                    }
+                                    @keyframes fadein {
+                                        from {
+                                            opacity: 0;
+                                        }
+                                        to {
+                                            opacity: 1;
+                                        }
+                                    }
+                                    /* Firefox < 16 */
+                                    @-moz-keyframes fadein {
+                                        from {
+                                            opacity: 0;
+                                        }
+                                        to {
+                                            opacity: 1;
+                                        }
+                                    }
+                                    /* Safari, Chrome and Opera > 12.1 */
+                                    @-webkit-keyframes fadein {
+                                        from {
+                                            opacity: 0;
+                                        }
+                                        to {
+                                            opacity: 1;
+                                        }
+                                    }
+                                    /* Internet Explorer */
+                                    @-ms-keyframes fadein {
+                                        from {
+                                            opacity: 0;
+                                        }
+                                        to {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                                
+                                @media (max-width: 989px) {
+                                    body {
+                                        height: 100vh;
+                                        overflow: hidden;
+                                        background-color: #F2F2F2;
+                                        display: grid;
+                                        grid-template: 1fr 8fr 0.5fr / 1fr;
+                                    }
+                                    nav {
+                                        height: 100px;
+                                        z-index: 1;
+                                        grid-column: 1 / span 1;
+                                        grid-row: 1 / span 1;
+                                        background-image: url(../img/logo.svg);
+                                        background-position: center;
+                                        /* Center the image */
+                                        background-repeat: no-repeat;
+                                        /* Do not repeat the image */
+                                        background-size: 200px;
+                                        background-origin: content-box;
+                                        padding: 1%;
+                                    }
+                                    nav :nth-child(n),
+                                    #home :nth-child(n),
+                                    .txt-venture {
+                                        display: none;
+                                    }
+                                    main {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    main header {
+                                        grid-column: 2 / span 1;
+                                        grid-row: 1 /span 1;
+                                        align-self: center;
+                                        justify-self: center;
+                                        font-size: 1.5em;
+                                        font-weight: bolder;
+                                        padding: 20px;
+                                        width: 75%;
+                                        color: #767676;
+                                        text-align: right;
+                                    }
+                                    .txt-about,
+                                    .txt-service-cont,
+                                    .andre-txt {
+                                        display: none;
+                                    }
+                                    .img-team picture,
+                                    .team-all picture {
+                                        object-fit: cover;
+                                        width: 70%;
+                                        max-height: 100%;
+                                        outline: 2px solid #EFC700;
+                                        background-repeat: no-repeat;
+                                        z-index: 10;
+                                    }
+                                    .img-portfolio {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                    .img-portfolio picture {
+                                        width: 30%;
+                                        height: 30%;
+                                        padding: 30px 20px;
+                                    }
+                                    .felipe {
+                                        grid-column: 7/ span 4;
+                                        grid-row: 2 /span 4;
+                                        background-image: url(../img/felipe_Litwinski.jpg);
+                                        background-position: 0 0;
+                                        background-size: cover;
+                                    }
+                                    .luciano {
+                                        grid-column: 8 / span 4;
+                                        grid-row: 7 /span 4;
+                                        background-image: url(../img/luciano_fialho.jpg);
+                                        background-position: 0 0;
+                                        background-size: cover;
+                                    }
+                                    .andre {
+                                        grid-column: 4 / span 2;
+                                        grid-row: 1 /span 2;
+                                        background-image: url(../img/andre_simao.jpg);
+                                        background-position: center;
+                                        background-size: cover;
+                                    }
+                                    .lucas {
+                                        grid-column: 2 / span 4;
+                                        grid-row: 6/span 4;
+                                        background-image: url(../img/Lucas_Mallard.jpg);
+                                        background-position: 0 0;
+                                        background-size: cover;
+                                    }
+                                    .img-team {
+                                        width: 100%;
+                                        height: 30%;
+                                        display: flex;
+                                        color: #F2F2F2;
+                                    }
+                                    #home {
+                                        background-image: url(../img/logo_mobile_bg.svg);
+                                        background-size: 135% 135% !important;
+                                    }
+                                    #contact {
+                                        background-image: url(../img/contato.svg);
+                                        background-size: 250% 180%;
+                                    }
+                                    #about {
+                                        background-image: url(../img/about_mobile.svg);
+                                        background-size: 350% 130%;
+                                        padding: 10%;
+                                    }
+                                    #local {
+                                        background-image: url(../img/local.svg);
+                                        background-size: 250% 150%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-content: space-around;
+                                        align-items: center;
+                                    }
+                                    .txt-local {
+                                        padding: 4%;
+                                    }
+                                    #local section {
+                                        width: 100%;
+                                        height: 75%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+                                    #service {
+                                        background-image: url(../img/service_mobile.svg);
+                                        background-size: 250% 150%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-around;
+                                        align-items: center;
+                                    }
+                                    .txt-ser {
+                                        display: none;
+                                    }
+                                    .txt-service {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    .txt-service>div {
+                                        width: 80%;
+                                        height: 70%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: right;
+                                        padding: 8%;
+                                    }
+                                    #portfolio {
+                                        background-image: url(../img/portfolio_mobile.svg);
+                                        background-size: 250% 150%;
+                                    }
+                                    #team {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-evenly;
+                                        align-items: center;
+                                        background-image: url(../img/equipe.svg);
+                                        background-size: 250% 150%;
+                                    }
+                                    .team-all {
+                                        display: grid;
+                                        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 80%;
+                                        height: 70%;
+                                        grid-gap: 5%;
+                                    }
+                                    .team-all picture {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    .team-all .andre {
+                                        grid-column: 1/span 1;
+                                        grid-row: 1 / span 1;
+                                    }
+                                    .team-all .felipe {
+                                        grid-column: 1/span 1;
+                                        grid-row: 2 / span 1;
+                                    }
+                                    .team-all .lucas {
+                                        grid-column: 2/span 1;
+                                        grid-row: 1 / span 1;
+                                    }
+                                    .team-all .luciano {
+                                        grid-column: 2/span 1;
+                                        grid-row: 2 / span 1;
+                                    }
+                                    #tabs {
+                                        width: 80%;
+                                        height: 40%;
+                                        display: grid;
+                                        grid-template: 1fr 0.5fr / 1fr;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+                                    #div1,
+                                    #div2 {
+                                        grid-column: 1;
+                                        grid-row: 1;
+                                    }
+                                    #nav {
+                                        grid-column: 1;
+                                        grid-row: 2;
+                                    }
+                                    .logo-bg {
+                                        height: 100%;
+                                        width: 60%;
+                                    }
+                                    .map {
+                                        height: 50%;
+                                        width: 60%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        outline: 2px solid #f08252;
+                                    }
+                                    .address {
+                                        width: 90%;
+                                        padding: 10%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                    }
+                                    nav>picture {
+                                        width: 100%;
+                                        height: 100%;
+                                        align-items: center;
+                                        justify-content: center;
+                                        display: flex;
+                                        padding: 2% 0;
+                                    }
+                                    .contact {
+                                        width: 100%;
+                                        height: 80%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+                                    .img-portfolio {
+                                        width: 100%;
+                                        height: 70%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+                                    .img-portfolio picture {
+                                        width: 30%;
+                                        height: 30%;
+                                        padding: 20px 10px;
+                                    }
+                                    .form-area {
+                                        width: 60%;
+                                        padding: 1%;
+                                    }
+                                    .form-group :nth-child(n) {
+                                        width: 100%;
+                                        padding: 1%;
+                                        margin: 1%;
+                                        border: solid 2px #65378C;
+                                        border-radius: 4px;
+                                    }
+                                    #submit {
+                                        width: 100px;
+                                        background-color: #65378C;
+                                        color: white;
+                                        font-weight: bolder;
+                                    }
+                                    footer {
+                                        grid-row: 3;
+                                        padding: 2%;
+                                        display: flex;
+                                        justify-content: space-evenly;
+                                        align-items: center;
+                                        text-align: center;
+                                        background-color: #3C3C3B;
+                                    }
+                                    footer img {
+                                        max-width: 50px;
+                                    }
+                                    footer p {
+                                        font-size: 0.7em;
+                                    }
