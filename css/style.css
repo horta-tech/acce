@@ -170,16 +170,16 @@ a:visited {
     .logo-home {
         position: absolute;
         top: 160px;
-        left: 189px;
-        -webkit-animation: fadeout 20s;
+        left: 180px;
+        -webkit-animation: fadeout 20s infinite;
         /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadeout 20s;
+        -moz-animation: fadeout 20s infinite;
         /* Firefox < 16 */
-        -ms-animation: fadeout 20s;
+        -ms-animation: fadeout 20s infinite;
         /* Internet Explorer */
-        -o-animation: fadeout 20s;
+        -o-animation: fadeout 20s infinite;
         /* Opera < 12.1 */
-        animation: fadeout 20s;
+        animation: fadeout 20s infinite;
     }
     .menu-about,
     .menu-local,
@@ -226,8 +226,8 @@ a:visited {
     }
     .menu-home {
         position: absolute;
-        top: 16.5%;
-        left: 10.2%;
+        top: 160px;
+        left: 189px;
         -webkit-animation: fadein 25s;
         /* Safari, Chrome and Opera > 12.1 */
         -moz-animation: fadein 25s;
